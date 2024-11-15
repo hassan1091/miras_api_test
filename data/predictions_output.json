@@ -1,36 +1,36 @@
 {
     "input": {
         "Temperature (\u0622\u00b0C)": "30",
-        "Humidity (%)": "37.13",
-        "Pressure (Pa)": "101494",
-        "Operating Hours": "2335",
-        "Response Time (ms)": 600
+        "humidity_percent": "37.13",
+        "pressure_pa": "101494",
+        "operating_hours": "2335",
+        "response_time_ms": 600
     },
     "predictions": [
         [
             {
-                "Device Status": "Slowdown",
-                "Failure Mode": "Latency Issue",
-                "Issue Detected": "Slow Response",
-                "Action Suggested": "Optimize Processing Capacity"
+                "device_status": "Slowdown",
+                "failure_mode": "Latency Issue",
+                "issue_detected": "Slow Response",
+                "action_suggested": "Optimize Processing Capacity"
             },
             0.6375
         ],
         [
             {
-                "Device Status": "Normal",
-                "Failure Mode": "Minor Sensor Degradation",
-                "Issue Detected": "Reduced Sensitivity",
-                "Action Suggested": "Recalibrate Sensor"
+                "device_status": "Normal",
+                "failure_mode": "Minor Sensor Degradation",
+                "issue_detected": "Reduced Sensitivity",
+                "action_suggested": "Recalibrate Sensor"
             },
             0.36
         ],
         [
             {
-                "Device Status": "Fault",
-                "Failure Mode": "None",
-                "Issue Detected": "High Temperature Alert",
-                "Action Suggested": "Check Mechanical Components"
+                "device_status": "Fault",
+                "failure_mode": "None",
+                "issue_detected": "High Temperature Alert",
+                "action_suggested": "Check Mechanical Components"
             },
             0.0025
         ]

@@ -1,7 +1,7 @@
 {
-  "Temperature (°C)": "30",
-  "Humidity (%)": "37.13",
-  "Pressure (Pa)": "101494",
-  "Operating Hours": "2335",
-  "Response Time (ms)": 600
+  "temperature_c": 30,
+  "humidity_percent": 37.13,
+  "pressure_pa": 101494,
+  "operating_hours": 2335,
+  "response_time_ms": 600
 }

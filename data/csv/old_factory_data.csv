@@ -1,4 +1,4 @@
-Timestamp,Temperature (°C),Humidity (%),Pressure (Pa),Operating Hours,Device Status,Failure Mode,Issue Detected,Action Suggested,Response Time (ms),Last Maintenance
+Timestamp,temperature_c,humidity_percent,pressure_pa,operating_hours,device_status,failure_mode,issue_detected,action_suggested,response_time_ms,last_maintenance
 2/28/2024 8:50,25.71,43.6,101349,2634,Normal,None,None,None,365,18:29.2
 9/13/2024 8:12,29.01,37.13,101494,2335,Slowdown,Latency Issue,Slow Response,Optimize Processing Capacity,695,18:29.2
 8/31/2024 4:15,33.46,35.68,101254,3288,Fault,Sensor Malfunction,Signal Instability,Inspect or Recalibrate Sensor,1021,18:29.2

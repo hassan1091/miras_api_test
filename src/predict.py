@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import json
-import joblib  # Import joblib for model persistence
+import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
@@ -108,25 +108,3 @@ def predict(input_data):
         grouped_predictions.append([combined_prediction, normalized_weight])
 
     return grouped_predictions
-
-# Example: Load real input data from JSON file
-input_data_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'input_data.json')
-
-input_data = load_input_data(input_data_path)
-
-# Predict for the loaded input data
-predictions = predict(input_data)
-
-# Format the output
-output = {
-    "input": input_data,
-    "predictions": predictions
-}
-
-# Save output to a JSON file
-predictions_output_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'predictions_output.json')
-
-with open(predictions_output_path, 'w') as output_file:
-    json.dump(output, output_file, indent=4)
-
-print(json.dumps(output, indent=4))  # Optional: print output to the console for verification
