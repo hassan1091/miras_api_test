@@ -1,12 +1,19 @@
 import json
+import os
+import sys
 from typing import Union
 
 from fastapi.responses import JSONResponse
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
+import uvicorn
 # 
 from utils.csv_to_json import read_old_factory_data_to_json
 from predict import predict
+
+
+#
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 
 app = FastAPI()
@@ -33,8 +40,8 @@ def read_root():
 def read_old_data():
     return JSONResponse(content=read_old_factory_data_to_json())
 
-@app.get("/preduct")
-def read_preduct():
+@app.get("/predict")
+def read_predict():
     input_data = {
         "temperature_c": 30,
         "humidity_percent": 37.13,
@@ -45,8 +52,15 @@ def read_preduct():
     return JSONResponse(content={"input": input_data,"predictions": predict(input_data)}
 )
 
-@app.post("/preduct")
-def read_preduct(data:DeviceData):
+@app.post("/predict")
+def predict(data:DeviceData):
     input_data = data.model_dump()
     return JSONResponse(content={"input": input_data,"predictions": predict(input_data)}
 )
+
+
+def listen():
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=False)
+
+if __name__ == "__main__":
+    listen()
